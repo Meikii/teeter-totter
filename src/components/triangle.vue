@@ -1,6 +1,9 @@
 <template>
   <div class="shape triangle" v-bind:style="triangleStyle()">
-    <div class="shape-text">{{this.$store.state.triangle.weight}}kg</div>
+    <div
+      class="shape-text"
+      v-bind:style="{fontSize:this.$store.state.triangle.weight*4+'px'}"
+    >{{this.$store.state.triangle.weight}}kg</div>
   </div>
 </template>
 <script>
@@ -36,7 +39,7 @@ export default {
   margin: auto;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .triangle {
   bottom: 10px;

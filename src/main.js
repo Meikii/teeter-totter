@@ -6,8 +6,24 @@ import {
     store
 } from './store/store';
 
-new Vue({
+let myApp = new Vue({
     el: '#app',
+    data: {
+
+        // keyCode: ''
+
+    },
+    methods: {
+        // handleGlobalKeyDown(e) {
+        //     this.keyCode = e.keyCode
+        //     console.log(e)
+        // }
+    },
     store: store,
     render: h => h(App)
+
 })
+
+// window.addEventListener('keydown', function(e) {
+//     myApp.handleGlobalKeyDown(e)
+// });
